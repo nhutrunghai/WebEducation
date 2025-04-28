@@ -1,0 +1,37 @@
+@use "../base/base" as *;
+.btn {
+  --btn-width: 126px;
+  display: inline-block;
+  padding: 12px 15px;
+  min-width: var(--btn-width);
+  background-color: var(--primary-color-button);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  scale: 1.05;
+}
+.btn-2 {
+  --btn-width: 126px;
+  width: 44%;
+  display: inline-block;
+  font-weight: 600;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 6px;
+  color: black;
+}
+.btn-link {
+  color: var(--primary-color-button);
+  font-weight: 600;
+  font-size: 1.6rem;
+  transition: all 0.2s ease;
+}
+.btn-link:hover {
+  color: var(--primary-color-button--hover);
+}

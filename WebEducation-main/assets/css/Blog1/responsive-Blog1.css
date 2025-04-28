@@ -1,0 +1,137 @@
+@media (min-width: 1024px) {}
+
+@media(min-width: 740px) and (max-width: 1023px) {
+    .head_section1 {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .author_section1 {
+        margin: 48px auto 0;
+    }
+
+    .info_author_s1 {
+        width: 70%;
+    }
+
+    .section2 {
+        width: 90%;
+        height: auto;
+    }
+
+    .part1_s2 {
+        width: 70%;
+        height: auto;
+    }
+
+    .part2_s2 {
+        width: 26%;
+        height: auto;
+        margin-left: 3%;
+    }
+
+    .cell1_tittle_part2_s2 {
+        width: 50%;
+    }
+
+    .content_part2_s2 {
+        display: block;
+        height: auto;
+    }
+
+    .cell1_content_part2_s2 {
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .cell2_content_part2_s2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .type_part2_s2 {
+        width: 75%;
+        padding: 0;
+    }
+
+    .section3 {
+        width: 65%;
+        margin-left: 5%;
+    }
+
+    .header_s3 {
+        height: auto;
+    }
+
+    .section4 {
+        width: 65%;
+        height: auto;
+        margin-left: 5%;
+    }
+
+    .content_s4 {
+        height: auto;
+    }
+}
+
+
+@media(max-width: 740px) {
+
+    .head_section1 {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .author_section1 {
+        margin: 48px auto 0;
+    }
+
+    .info_author_s1 {
+        width: 65%;
+    }
+
+    .section2 {
+        width: 85%;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .part1_s2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .part2_s2 {
+        width: 70%;
+        margin: 50px auto 0;
+    }
+
+    .section3 {
+        width: 85%;
+        margin: 30px auto;
+    }
+
+    .header_s3 {
+        height: auto;
+    }
+
+    .section4 {
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content_s4 {
+        height: auto;
+    }
+
+    .cell_form_s4 {
+        width: 28%;
+    }
+
+}
