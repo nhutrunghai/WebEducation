@@ -1,0 +1,33 @@
+*,::after,::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+:root{
+    --primary-color-button:  #0166FF;
+    --primary-color-button--hover:  #74acff;;
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    list-style: none;
+}
+html{
+    font-family: "Inter", sans-serif;
+    font-size: 62.5%;
+}
+button,
+input,
+textarea,
+select{
+    font-family: inherit;
+    color: inherit;
+}
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}

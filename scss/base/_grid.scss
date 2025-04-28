@@ -1,0 +1,120 @@
+// @breakpoint,@value,@container,@row,@column,@row-col
+// ------------- Variables -------------------
+$grid-columns: 8 !default;
+$grid-gutter: 10px !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+);
+$gutters: (
+  0: 0,
+  1: 0.25,
+  2: 0.5,
+  3: 1,
+  4: 1.5,
+  5: 3,
+);
+// ------------- End Variables -------------------
+
+// ------------- Class -------------------
+%gutter-padding {
+  padding-left: calc(var(--grid-gutter-x) * 0.5);
+  padding-right: calc(var(--grid-gutter-x) * 0.5);
+}
+.container-fluid {
+  --grid-gutter-x: #{$grid-gutter};
+  --grid-gutter-y: #{$grid-gutter};
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @extend %gutter-padding;
+}
+.container {
+  @extend .container-fluid;
+}
+.rowSet {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--grid-gutter-x) * 0.5 * -1);
+  margin-right: calc(var(--grid-gutter-x) * 0.5 * -1);
+  margin-top: calc(var(--grid-gutter-y) * -1);
+  > * {
+    margin-top: var(--grid-gutter-y);
+    @extend %gutter-padding;
+  }
+}
+
+.columnSet {
+  flex: 1 0;
+}
+// ------------- End Class -------------------
+
+// ------------- Mixin -------------------
+@mixin make-media($value, $check: false) {
+  @if $check {
+    @content;
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+@mixin make-row-col($infix) {
+  @for $i from 1 through $grid-columns {
+    .rowSet-col#{$infix}-#{$i} > * {
+      flex: 0 0 auto;
+      width: calc(100% / $i);
+    }
+  }
+}
+@mixin make-col($infix) {
+  @for $i from 1 through $grid-columns {
+    .columnSet#{$infix}-#{$i} {
+      flex: 0 0 auto;
+      width: calc(100% / $grid-columns * $i);
+    }
+  }
+}
+@mixin make-offset($infix) {
+  @for $i from 0 to $grid-columns {
+    .offset#{$infix}-#{$i} {
+      margin-left: calc(100% / $grid-columns * $i);
+    }
+  }
+}
+@mixin make-gutter($infix) {
+  @each $gutters, $value in $gutters {
+    .g#{$infix}-#{$gutters},
+    .g#{$infix}-x-#{$gutters} {
+      --grid-gutter-x: calc(#{$value} * #{$grid-gutter});
+    }
+    .g#{$infix}-#{$gutters},
+    .g#{$infix}-y-#{$gutters} {
+      --grid-gutter-y: calc(#{$value} * #{$grid-gutter});
+    }
+  }
+}
+// ----------------- END Mixin -------------------
+@each $breakpoint, $value in $grid-breakpoints {
+  $max-width: map-get($container-max-widths, $breakpoint);
+  $is-xs: $breakpoint == xs;
+  $infix: if($is-xs, "", "-#{$breakpoint}");
+  @include make-media($value, $is-xs) {
+    .container {
+      max-width: $max-width;
+    }
+    @include make-row-col($infix);
+    @include make-col($infix);
+    @include make-offset($infix);
+    @include make-gutter($infix);
+  }
+}
