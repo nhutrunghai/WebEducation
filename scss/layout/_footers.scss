@@ -1,0 +1,151 @@
+@use "../abstracts";
+@use "../components/buttton";
+.b-footer {
+  background-color: #f5f5f5;
+  //   height: 500px;
+
+  .footer-container {
+    width: 70%;
+    padding: 50px 0;
+    margin: 0 auto;
+    .footer-subscribe {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 243px;
+      background: linear-gradient(91.22deg, #a6cf4a -4.67%, #98be41 101.64%);
+      border-radius: 20px;
+      .subscribe-title {
+        font-weight: 600;
+        font-size: 4rem;
+        color: #ffffff;
+        @include abstracts.breakpoint("md") {
+          font-size: 3rem;
+        }
+        @include abstracts.breakpoint("sm") {
+          font-size: 2.3rem;
+        }
+      }
+      .subscribe-decs {
+        padding: 30px 0;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: #ffffff;
+        @include abstracts.breakpoint("sm") {
+          font-size: 1.2rem;
+        }
+      }
+      .input-emails {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 339px;
+        height: 48px;
+        border-radius: 42px;
+        overflow: hidden;
+        background-color: #fff;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        @include abstracts.breakpoint("sm") {
+          width: 250px;
+        }
+        input {
+          outline: none;
+          border: none;
+          padding-left: 15px;
+          @include abstracts.breakpoint("sm") {
+            width: 100px;
+          }
+        }
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          transition: all 0.2s ease;
+          border: 6px;
+          @include abstracts.breakpoint("sm") {
+            --btn-width: 100px;
+          }
+          &:hover {
+            scale: 1;
+          }
+        }
+      }
+    }
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      @include abstracts.breakpoint("lg") {
+        justify-content: unset;
+      }
+      flex-wrap: wrap;
+      .info-item {
+        .btn {
+          border-radius: 6px;
+          padding: 10px 15px;
+          margin-left: 10px;
+          --btn-width: 97px;
+          @include abstracts.breakpoint("sm") {
+            --btn-width: 77px;
+            margin-left: 5px;
+          }
+        }
+        input {
+          border: none;
+          outline: none;
+          width: 194px;
+          height: 36px;
+          padding-left: 15px;
+          border-radius: 6px;
+          @include abstracts.breakpoint("sm") {
+            width: 154px;
+          }
+        }
+        p {
+          color: #717171;
+          font-weight: 500;
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+          line-height: 15px;
+        }
+        li {
+          .active {
+            color: #010101;
+            font-weight: 500;
+            font-size: 1.4rem;
+          }
+        }
+        &:not(:first-child) {
+          width: calc(60% / 4);
+          display: flex;
+          justify-content: center;
+          @include abstracts.breakpoint("xl") {
+            width: calc(50% / 3);
+          }
+          @include abstracts.breakpoint("lg") {
+            justify-content: unset;
+            margin-right: 20px;
+          }
+        }
+      }
+      .info-email {
+        width: 40%;
+        padding-bottom: 30px;
+        @include abstracts.breakpoint("xl") {
+          width: 50%;
+        }
+        @include abstracts.breakpoint("lg") {
+          width: 100%;
+          display: flex;
+        }
+        p {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}

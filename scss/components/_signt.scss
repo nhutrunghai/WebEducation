@@ -1,0 +1,144 @@
+@use "../abstracts";
+$primary-color-text: #010101;
+.sign-main {
+  display: flex;
+  height: 100vh;
+  .sign-user {
+    flex-grow: 1;
+    .container {
+      padding: 20px;
+    }
+    .sign-user-content {
+      max-width: 360px;
+      margin: 100px auto 0 auto;
+      h1 {
+        font-weight: 600;
+        font-size: 3rem;
+        color: $primary-color-text;
+      }
+      > p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: #777e90;
+        margin: 30px 0;
+      }
+      .sign-user-content-google {
+        margin: 30px 0;
+        a {
+          display: flex;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          align-items: center;
+          justify-content: center;
+          padding: 6px 0;
+          cursor: pointer;
+          width: 100%;
+          p {
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: $primary-color-text;
+            margin-left: 10px;
+          }
+        }
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        color: #777e90;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        &::before,
+        &::after {
+          content: "";
+          flex: 1;
+          border-bottom: 2px solid #ddd;
+        }
+      }
+      .sign-user-form {
+        > input {
+          width: 100%;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #ddd;
+          height: 35px;
+          margin-top: 20px;
+          font-size: 15px;
+          &:not(:first-child) {
+            margin-top: 30px;
+          }
+        }
+        .sign-user-form-text {
+          display: flex;
+          margin: 20px 0 30px 0;
+          .remember {
+            color: $primary-color-text;
+            font-weight: 400;
+            font-size: 1.4rem;
+            margin-left: 8px;
+          }
+          .forgot {
+            margin-left: auto;
+            text-decoration: underline;
+            color: $primary-color-text;
+            font-weight: 400;
+            font-size: 1.4rem;
+            a {
+              color: $primary-color-text;
+              transition: all 0.1s ease-in-out;
+              &:hover {
+                color: rgb(18, 149, 18);
+              }
+            }
+          }
+        }
+        .btn-signt {
+          width: 100%;
+          background-color: #0166ff;
+          color: white;
+          height: 48px;
+          border-radius: 6px;
+          font-weight: 500;
+          font-size: 1.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px 0 35px 0;
+          cursor: pointer;
+          transition: all 0.1s ease-in-out;
+          &:hover {
+            background-color: #0056d2;
+          }
+        }
+        .link-sign-up {
+          p {
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #777e90;
+            a {
+              color: $primary-color-text;
+              margin-left: 4px;
+              transition: all 0.1s ease-in-out;
+              &:hover {
+                color: rgb(18, 149, 18);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sign-img {
+    width: auto;
+    height: 100%;
+    @include abstracts.breakpoint("lg") {
+      width: 50%;
+    }
+    @include abstracts.breakpoint("md") {
+      display: none;
+    }
+    img {
+      height: 100%;
+    }
+  }
+}
