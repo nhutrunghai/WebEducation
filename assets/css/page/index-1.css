@@ -896,6 +896,12 @@ button {
     line-height: 30px;
   }
 }
+@media (max-width: 767.98px) {
+  .container .people .people-main .people-content .people-content-text p {
+    font-size: 1.5rem;
+    line-height: 20px;
+  }
+}
 .container .people .people-main .people-content .people-content-info {
   display: flex;
   justify-content: space-between;

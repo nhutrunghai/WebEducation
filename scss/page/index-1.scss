@@ -771,6 +771,7 @@ $primary-color-hover: #74acff;
             left: 50%;
             transform: translateX(-50%);
             max-width: 100%;
+            transition: all 0.2s ease;
           }
         }
         .banner-left {
@@ -826,6 +827,10 @@ $primary-color-hover: #74acff;
             @include abstracts.breakpoint("lg") {
               font-size: 2rem;
               line-height: 30px;
+            }
+            @include abstracts.breakpoint("md") {
+              font-size: 1.5rem;
+              line-height: 20px;
             }
           }
         }
