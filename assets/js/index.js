@@ -31,6 +31,7 @@ const btnNext = document.querySelector(".banner-right");
 const btnPrev = document.querySelector(".banner-left");
 let currentImg = 0;
 imgContainer.src = imgArr[currentImg];
+textContainer.innerHTML = textArr[currentImg]
 btnNext.addEventListener("click", () => {
   console.log("next");
   imgContainer.style.opacity = 1;

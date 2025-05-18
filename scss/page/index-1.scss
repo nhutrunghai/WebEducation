@@ -934,12 +934,13 @@ $primary-color-hover: #74acff;
   }
   .contact {
     // position: relative;
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     .contact-main {
       display: flex;
       justify-content: space-between;
 
       .contact-content {
+        padding-bottom: 20px;
         width: 45%;
         align-self: flex-start;
         @include abstracts.breakpoint("sm") {

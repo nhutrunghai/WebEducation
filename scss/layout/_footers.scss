@@ -90,7 +90,9 @@
           margin-left: 10px;
           --btn-width: 97px;
           @include abstracts.breakpoint("sm") {
-            --btn-width: 77px;
+            font-size: 1.4rem;
+            text-align: center;
+            width: 55px;
             margin-left: 5px;
           }
         }

@@ -1302,7 +1302,9 @@ button {
 }
 @media (max-width: 575.98px) {
   .b-footer .footer-container .footer-info .info-item .btn {
-    --btn-width: 77px;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 55px;
     margin-left: 5px;
   }
 }
@@ -2123,6 +2125,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   max-width: 100%;
+  transition: all 0.2s ease;
 }
 .container .people .people-main .people-banner .banner-left {
   left: -9px;
@@ -2305,13 +2308,14 @@ button {
   }
 }
 .container .contact {
-  padding: 30px 0;
+  padding: 30px 0 0 0;
 }
 .container .contact .contact-main {
   display: flex;
   justify-content: space-between;
 }
 .container .contact .contact-main .contact-content {
+  padding-bottom: 20px;
   width: 45%;
   align-self: flex-start;
 }

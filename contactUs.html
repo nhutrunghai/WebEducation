@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/contactus.css">
+    <link rel="stylesheet" href="./assets/icon/css/all.min.css">
+    <title>Contact Us</title>
+    <!-- Scripts load DOM HTMl-->
+    <script src="./assets/js/script.js"></script>
+</head>
+<body>
+
+     <!-- Header PC  -->
+    <header id="header" class="header"></header>
+    <!-- Load Header -->
+    <script>
+      load("#header", "./template/header.html");
+    </script>
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="main-content">
+        <h1>Contact Us</h1>
+        <p> Need help or have a suggention? Let us know.</p>
+        <form id="contact-form">
+            <div class="row1">
+            <input type="text" placeholder="Name*" name="name" required>
+            <input type="email" placeholder="Email*" email="email" required>
+        </div>
+        <div class="row2">
+            <input type="text" placeholder="Type your message" class="message">
+        </div>
+            <button type="submit">Submit.</button>
+         </form>      
+    </div>
+    <div class="b-footer">
+  <div class="footer-container">
+    <div class="footer-subscribe">
+      <div class="subscribe-title">Subscribe Newsletters</div>
+      <div class="subscribe-decs">
+        Enter your email address to register to our newsletter
+      </div>
+      <div class="input-emails">
+        <input type="email" placeholder="Your email" required />
+        <div class="btn">Sign up</div>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="info-item info-email">
+        <ul>
+          <li><img src="./assets/img/logo.svg" alt="" /></li>
+          <li>
+            <p>
+              Join our newsletter to stay up to date on features and releases.
+            </p>
+          </li>
+          <li>
+            <input type="text" placeholder="Your email" />
+            <div class="btn">Subscribe</div>
+          </li>
+        </ul>
+      </div>
+      <div class="info-item info-pages">
+        <ul>
+          <li>
+            <p class="active">Pages</p>
+          </li>
+          <li>
+            <p>Home</p>
+          </li>
+          <li>
+            <p>About</p>
+          </li>
+          <li>
+            <p>Contact</p>
+          </li>
+          <li>
+            <p>Blog</p>
+          </li>
+          <li>
+            <p>Courses</p>
+          </li>
+        </ul>
+      </div>
+      <div class="info-item info-cms-pages">
+        <ul>
+          <li><p class="active">CMS Pages</p></li>
+          <li><p>Blog Post</p></li>
+          <li><p>Blog Categories</p></li>
+          <li><p>Courses Single</p></li>
+          <li><p>Courses categories</p></li>
+          <li><p>Product Page</p></li>
+          <li><p>Product Categories</p></li>
+        </ul>
+      </div>
+      <div class="info-item info-account-pages">
+        <ul>
+          <li><p class="active">Account Pages</p></li>
+          <li><p>Login</p></li>
+          <li><p>Register</p></li>
+          <li><p>Forgot Password</p></li>
+          <li><p>Reset Password</p></li>
+          <li><p>Email Confirmation</p></li>
+        </ul>
+      </div>
+      <div class="info-item info-legal">
+        <ul>
+          <li><p class="active">Utility Pages</p></li>
+          <li><p>Licenses</p></li>
+          <li><p>404</p></li>
+          <li><p>Password</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
