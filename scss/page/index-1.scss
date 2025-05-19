@@ -259,10 +259,7 @@ $primary-color-hover: #74acff;
           translate: -147% -104%;
         }
       }
-      // .item{
-      //     position: absolute;
-      //     top: 60%;
-      // }
+
       @include abstracts.breakpoint("lg") {
         display: none;
       }
@@ -757,6 +754,9 @@ $primary-color-hover: #74acff;
         @include abstracts.breakpoint("lg") {
           height: calc(588px * 70 / 100);
         }
+        @include abstracts.breakpoint("sm") {
+          width: 75%;
+        }
         .people-banner-img {
           margin: auto;
           width: 85%;
@@ -772,6 +772,59 @@ $primary-color-hover: #74acff;
             transform: translateX(-50%);
             max-width: 100%;
             transition: all 0.2s ease;
+          }
+          .people-banner-content-mobile {
+            display: none;
+            @include abstracts.breakpoint("sm") {
+              background-color: #fff;
+              position: absolute;
+              width: 90%;
+              transform: translateX(-50%);
+              left: 50%;
+              bottom: -1px;
+              padding: 0 10px;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              padding: 20px 10px;
+              transition: all 0.4s ease;
+            }
+
+            .people-banner-content-mobile-text {
+              font-size: 1.5rem;
+              line-height: 20px;
+            }
+            .people-banner-content-mobile-author {
+              .people-banner-content-mobile-author-name {
+                font-size: 1.6rem;
+                font-weight: 600;
+                padding: 10px 0;
+              }
+              .people-banner-content-mobile-author-job {
+                font-size: 1.2rem;
+                color: #717171;
+              }
+            }
+          }
+          .active {
+            animation: slide 0.5s ease-in-out;
+            @include abstracts.breakpoint("lg") {
+              display: none;
+            }
+            @include abstracts.breakpoint("sm") {
+              display: block;
+            }
+          }
+          @keyframes slide {
+            0% {
+              transform: translate(-50%, 50%);
+              opacity: 0;
+              left: 50%;
+            }
+            100% {
+              transform: translate(-50%, 0);
+              opacity: 1;
+              left: 50%;
+            }
           }
         }
         .banner-left {
@@ -809,6 +862,9 @@ $primary-color-hover: #74acff;
         }
       }
       .people-content {
+        @include abstracts.breakpoint("sm") {
+          display: none;
+        }
         width: 55%;
         max-height: 405px;
         @include abstracts.breakpoint("lg") {

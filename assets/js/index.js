@@ -24,14 +24,31 @@ const textArr = [
 ];
 
 const textContainer = document.querySelector(".people-content-text-item");
+const textContainerMobile = document.querySelector(
+  ".people-banner-content-mobile-text"
+);
 const imgContainer = document.querySelector(".people-banner-img-item");
 const authorContainer = document.querySelector(".people-content-info-1-author");
+const authorContainerMobile = document.querySelector(
+  ".people-banner-content-mobile-author-name"
+);
 const jobContainer = document.querySelector(".people-content-info-1-job");
+const jobContainerMobile = document.querySelector(
+  ".people-banner-content-mobile-author-job"
+);
 const btnNext = document.querySelector(".banner-right");
 const btnPrev = document.querySelector(".banner-left");
 let currentImg = 0;
 imgContainer.src = imgArr[currentImg];
-textContainer.innerHTML = textArr[currentImg]
+textContainer.innerHTML = textArr[currentImg];
+function addText(currentImg) {
+  textContainer.innerHTML = textArr[currentImg][0];
+  authorContainer.innerHTML = textArr[currentImg][1];
+  jobContainer.innerHTML = textArr[currentImg][2];
+  textContainerMobile.innerHTML = textArr[currentImg][0];
+  authorContainerMobile.innerHTML = textArr[currentImg][1];
+  jobContainerMobile.innerHTML = textArr[currentImg][2];
+}
 btnNext.addEventListener("click", () => {
   console.log("next");
   imgContainer.style.opacity = 1;
@@ -48,9 +65,7 @@ btnNext.addEventListener("click", () => {
       imgContainer.src = imgArr[currentImg];
       imgContainer.style.opacity = 0;
       imgContainer.style.transform = "translateX(calc(-50% -50px))";
-      textContainer.innerHTML = textArr[currentImg];
-      authorContainer.innerHTML = textArr[currentImg][1];
-      jobContainer.innerHTML = textArr[currentImg][2];
+      addText(currentImg);
       setTimeout(() => {
         imgContainer.style.opacity = 1;
         imgContainer.style.transform = "translateX(calc(-50% + 0px))";
@@ -77,9 +92,7 @@ btnPrev.addEventListener(
         imgContainer.src = imgArr[currentImg];
         imgContainer.style.opacity = 0;
         imgContainer.style.transform = "translateX(calc(-50% + 50px))";
-        textContainer.innerHTML = textArr[currentImg];
-        authorContainer.innerHTML = textArr[currentImg][1];
-        jobContainer.innerHTML = textArr[currentImg][2];
+        addText(currentImg);
         setTimeout(() => {
           imgContainer.style.opacity = 1;
           imgContainer.style.transform = "translateX(calc(-50% + 0px))";
@@ -89,3 +102,9 @@ btnPrev.addEventListener(
   },
   500
 );
+
+const activeText = document.querySelector(".people-banner-img");
+const bannerText = document.querySelector(".people-banner-content-mobile");
+activeText.addEventListener("click", () => {
+  bannerText.classList.toggle("active");
+});

@@ -2111,6 +2111,11 @@ button {
     height: 411.6px;
   }
 }
+@media (max-width: 575.98px) {
+  .container .people .people-main .people-banner {
+    width: 75%;
+  }
+}
 .container .people .people-main .people-banner .people-banner-img {
   margin: auto;
   width: 85%;
@@ -2126,6 +2131,62 @@ button {
   transform: translateX(-50%);
   max-width: 100%;
   transition: all 0.2s ease;
+}
+.container .people .people-main .people-banner .people-banner-img .people-banner-content-mobile {
+  display: none;
+}
+@media (max-width: 575.98px) {
+  .container .people .people-main .people-banner .people-banner-img .people-banner-content-mobile {
+    background-color: #fff;
+    position: absolute;
+    width: 90%;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -1px;
+    padding: 0 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px 10px;
+    transition: all 0.4s ease;
+  }
+}
+.container .people .people-main .people-banner .people-banner-img .people-banner-content-mobile .people-banner-content-mobile-text {
+  font-size: 1.5rem;
+  line-height: 20px;
+}
+.container .people .people-main .people-banner .people-banner-img .people-banner-content-mobile .people-banner-content-mobile-author .people-banner-content-mobile-author-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.container .people .people-main .people-banner .people-banner-img .people-banner-content-mobile .people-banner-content-mobile-author .people-banner-content-mobile-author-job {
+  font-size: 1.2rem;
+  color: #717171;
+}
+.container .people .people-main .people-banner .people-banner-img .active {
+  animation: slide 0.5s ease-in-out;
+}
+@media (max-width: 991.98px) {
+  .container .people .people-main .people-banner .people-banner-img .active {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .container .people .people-main .people-banner .people-banner-img .active {
+    display: block;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    left: 50%;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    left: 50%;
+  }
 }
 .container .people .people-main .people-banner .banner-left {
   left: -9px;
@@ -2167,6 +2228,11 @@ button {
 .container .people .people-main .people-content {
   width: 55%;
   max-height: 405px;
+}
+@media (max-width: 575.98px) {
+  .container .people .people-main .people-content {
+    display: none;
+  }
 }
 @media (max-width: 991.98px) {
   .container .people .people-main .people-content {
