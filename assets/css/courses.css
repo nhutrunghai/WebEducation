@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Banner */
+.courses-banner {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.courses-banner .subtitle {
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.courses-banner h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.courses-banner .desc {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Grid Layout */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Card */
+.course-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  font-size: 18px;
+  padding: 15px;
+  color: #333;
+  line-height: 1.4;
+  min-height: 70px;
+}
+
+.course-meta {
+  padding: 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.course-meta i {
+  margin-right: 6px;
+}
+
+.stars {
+  color: #ff9900;
+}
