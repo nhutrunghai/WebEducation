@@ -1,68 +1,114 @@
-# WebEducation
+<div align="center">
 
-A static education website interface built with **HTML**, **SCSS/CSS**, and JavaScript. The project demonstrates a complete multi-page learning platform layout with course pages, blog pages, authentication screens, and contact information.
+# 🎓 WebEducation
 
-## Overview
+### Giao diện website giáo dục nhiều trang bằng HTML + SCSS
 
-WebEducation is a front-end practice project focused on building a clean and responsive education website UI. It is suitable for showcasing layout skills, page organization, and SCSS styling workflow.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=000)
 
-## Pages
+</div>
 
-- Home page
-- About page
-- Courses page
-- Course detail page
-- Blog page
-- Blog detail page
-- Sign in page
-- Sign up page
-- Contact page
+---
 
-## Tech Stack
+## 🌟 Giới thiệu
 
-- HTML5
-- SCSS
-- CSS3
-- JavaScript
-- Node.js scripts for SCSS watching
+**WebEducation** là project front-end mô phỏng một website giáo dục/trung tâm học tập. Dự án tập trung vào bố cục giao diện, tổ chức nhiều trang HTML, styling bằng SCSS và xây dựng trải nghiệm người dùng cơ bản.
 
-## Project Structure
+Project phù hợp để thể hiện kỹ năng:
+
+- Dàn layout website nhiều trang
+- Tổ chức file HTML/CSS/SCSS
+- Thiết kế giao diện khóa học/blog/liên hệ
+- Xây dựng UI tĩnh có tính thực tế
+
+---
+
+## 🧭 Sơ đồ trang
 
 ```text
-assets/       # Compiled CSS, images, and static assets
-scss/         # SCSS source files
-template/     # Shared template assets/pages
-index.html    # Main landing page
-courses.html  # Courses listing page
-blog.html     # Blog listing page
+🏠 index.html             Trang chủ
+👥 about.html             Giới thiệu
+📚 courses.html           Danh sách khóa học
+📖 courses-detail.html    Chi tiết khóa học
+📰 blog.html              Danh sách bài viết
+📝 Blog1.html             Chi tiết bài viết
+📩 contactUs.html         Liên hệ
+🔐 signIn.html            Đăng nhập
+🆕 signUp.html            Đăng ký
 ```
 
-## Getting Started
+---
 
-### 1. Install dependencies
+## 🎨 Điểm nổi bật giao diện
+
+| Khu vực | Mục đích |
+|---|---|
+| Hero section | Tạo ấn tượng đầu trang |
+| Courses | Hiển thị danh sách khóa học |
+| Blog | Hiển thị nội dung/bài viết học tập |
+| Auth pages | Giao diện đăng nhập/đăng ký |
+| Contact | Form và thông tin liên hệ |
+
+---
+
+## 🗂️ Cấu trúc project
+
+```text
+WebEducation/
+├── assets/       # CSS build, hình ảnh, tài nguyên tĩnh
+├── scss/         # Source SCSS
+├── template/     # Template/phần giao diện phụ
+├── index.html    # Trang chủ
+├── courses.html  # Trang khóa học
+├── blog.html     # Trang blog
+└── package.json  # Script build SCSS
+```
+
+---
+
+## ⚙️ Cách chạy
+
+### 1. Cài dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Compile SCSS during development
+### 2. Watch SCSS
 
 ```bash
 npm run start
 ```
 
-### 3. Open the website
+### 3. Mở website
 
-Open `index.html` directly in the browser or use a local development server such as VS Code Live Server.
+Bạn có thể mở trực tiếp:
 
-## Highlights
+```text
+index.html
+```
 
-- Multi-page education website layout
-- SCSS-based styling workflow
-- Course and blog page structure
-- Authentication UI screens
-- Good practice project for front-end fundamentals
+Hoặc dùng extension **Live Server** trong VS Code để xem giao diện thuận tiện hơn.
 
-## Author
+---
 
-Developed by [Nhữ Trung Hải](https://github.com/nhutrunghai).
+## 🚀 Có thể cải thiện tiếp
+
+- [ ] Responsive tốt hơn trên mobile
+- [ ] Chuẩn hóa lại naming class CSS
+- [ ] Tách component HTML dùng chung
+- [ ] Thêm animation nhẹ cho UI
+- [ ] Deploy lên GitHub Pages
+- [ ] Bổ sung ảnh preview giao diện vào README
+
+---
+
+<div align="center">
+
+✨ Một project luyện tập front-end nền tảng, tập trung vào giao diện website giáo dục.  
+Developed by [Nhữ Trung Hải](https://github.com/nhutrunghai)
+
+</div>
